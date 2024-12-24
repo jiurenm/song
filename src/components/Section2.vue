@@ -24,7 +24,7 @@ const start = ref(false)
         class="mt-10 h-40 bg-contain bg-center-top bg-no-repeat"
         :style="{
           backgroundImage:
-            'url(https://academy.allaboutbirds.org/features/bird-song-hero/images/hero-wordmark.png)',
+            'url()',
         }"
       ></div>
 

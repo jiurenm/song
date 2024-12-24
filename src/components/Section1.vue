@@ -18,7 +18,7 @@ const start = ref(false)
       class="h-full w-90% rounded-2xl bg-#64a970 bg-cover bg-center-center bg-no-repeat"
       :style="{
         backgroundImage:
-          'url(https://academy.allaboutbirds.org/features/bird-song-hero/images/intro-bg.png)',
+          'url()',
       }"
       v-if="!start"
     >
@@ -26,7 +26,7 @@ const start = ref(false)
         class="mt-10 h-60 w-full bg-contain bg-center-top bg-no-repeat"
         :style="{
           backgroundImage:
-            'url(https://academy.allaboutbirds.org/features/bird-song-hero/images/hero-wordmark.png)',
+            'url()',
         }"
       ></div>
 
