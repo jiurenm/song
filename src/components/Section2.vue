@@ -17,19 +17,18 @@ const start = ref(false)
 <template>
   <Transition name="slide-up" mode="out-in">
     <div
-      class="h-full w-90% rounded-2xl bg-#B2D3B8 bg-cover bg-center-center bg-no-repeat"
+      class="h-full w-90% rounded-2xl bg-blue bg-cover bg-center-center bg-no-repeat"
       v-if="!start"
     >
       <div
         class="mt-10 h-40 bg-contain bg-center-top bg-no-repeat"
         :style="{
-          backgroundImage:
-            'url()',
+          backgroundImage: 'url()',
         }"
       ></div>
 
       <div class="flex justify-center text-xl mt-3">
-        CHALLENGE ROUND - Train your brain to visually identify bird songs.
+        CHALLENGE ROUND - try to figure out are target calls or songs exist from the sounds.
       </div>
 
       <div class="grid justify-center mt-3 gap-y-1">
@@ -39,7 +38,7 @@ const start = ref(false)
           >
             Step 1
           </div>
-          <span>- Play each song as many times as you want</span>
+          <span>- Play the sounds</span>
         </div>
         <div class="w-90 flex items-center">
           <div
@@ -47,13 +46,13 @@ const start = ref(false)
           >
             Step 2
           </div>
-          <span>- Select the matching spectrogram</span>
+          <span>- Make your choice</span>
         </div>
       </div>
 
       <div class="flex justify-center mt-6">
         <n-button color="#AC4D7D" class="py-10 px-20 text-2xl" @click="start = true"
-          >Play Bird Song Hero!</n-button
+          >Start</n-button
         >
       </div>
     </div>

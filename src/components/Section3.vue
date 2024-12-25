@@ -23,8 +23,7 @@ const start = ref(false)
       <div
         class="mt-10 h-40 bg-contain bg-center-top bg-no-repeat"
         :style="{
-          backgroundImage:
-            'url()',
+          backgroundImage: 'url()',
         }"
       ></div>
 
