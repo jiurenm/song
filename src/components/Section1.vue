@@ -25,27 +25,20 @@ const play = () => {
 <template>
   <Transition name="slide-up" mode="out-in">
     <div
-      class="h-full w-90% rounded-2xl bg-blue bg-cover bg-center-center bg-no-repeat"
+      class="h-full w-90% rounded-2xl bg-blue bg-cover bg-center-center bg-no-repeat grid place-items-center"
       :style="{
         backgroundImage: 'url()',
       }"
       v-if="!start"
     >
-      <div
-        class="mt-10 h-60 w-full bg-contain bg-center-top bg-no-repeat"
-        :style="{
-          backgroundImage: 'url()',
-        }"
-      ></div>
-
-      <div class="flex justify-center mt-10">
+      <div class="flex justify-center">
         <div class="w-145 p-5 bg-#E0D4D8 text-center">
           Prepare to listen to examples, answer questions and complete the questionnaire according
           to the step-by-step instructions.
         </div>
       </div>
 
-      <div class="flex justify-center mt-6">
+      <div class="flex justify-center">
         <n-button color="#AC4D7D" class="py-10 px-20 text-2xl" @click="start = true"
           >Start</n-button
         >
@@ -53,14 +46,14 @@ const play = () => {
     </div>
 
     <div v-else class="flex items-center justify-center">
-      <div class="text-xl">
+      <div class="text-3xl grid gap-10">
         <div>Step 1: Listen to the target bird’s calls and songs</div>
         <div>
           Step 2: Listen to the corresponding calls and songs in the subsequent sound samples
         </div>
         <div>Step 3: After selecting all options, answer the questionnaire</div>
 
-        <div class="mt-3 flex items-center justify-center gap-x-10">
+        <div class="mt-3 flex items-center justify-center gap-20">
           <n-button class="w-30" color="white"
             ><span class="text-black" @click="play">Call 1</span></n-button
           >
@@ -69,7 +62,7 @@ const play = () => {
           >
         </div>
 
-        <div class="mt-3 flex items-center justify-center gap-x-10">
+        <div class="mt-3 flex items-center justify-center gap-20">
           <n-button class="w-30" color="white"
             ><span class="text-black" @click="play">Song 1</span></n-button
           >
