@@ -145,6 +145,7 @@ const next = () => {
 }
 
 .n-radio-group .n-radio-button.n-radio-button--checked {
-    color: red !important
+    color: white !important;
+    background-color: #42B156;
 }
 </style>
