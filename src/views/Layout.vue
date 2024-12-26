@@ -96,10 +96,10 @@ onMounted(() => {
             <div class="w-30 h-30">这是 section 3</div>
           </n-popover>
         </div>
-        <div class="absolute bottom-0 w-full h-8px bg-gray-300"></div>
+        <div class="absolute bottom-0 w-full h-8px bg-sky-800"></div>
       </n-layout-header>
       <n-layout position="absolute" style="top: 64px">
-        <n-layout content-style="padding: 48px;" class="h-full bg-white">
+        <n-layout content-style="padding: 48px;" class="h-full bg-blue-300">
           <div class="h-90% bg-sky rounded-xl flex justify-center">
             <RouterView />
           </div>

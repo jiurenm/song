@@ -57,8 +57,6 @@ const start = ref(false)
       </div>
     </div>
 
-    <div v-else class="flex items-center">
-      <section-three-content></section-three-content>
-    </div>
+    <section-three-content v-else></section-three-content>
   </Transition>
 </template>

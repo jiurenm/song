@@ -9,7 +9,7 @@ import { computed, ref } from 'vue'
 
 import { NButton, NRadioButton, NRadioGroup } from 'naive-ui'
 
-const playVideo = (option: 'A' | 'B' | 'C' | 'D') => {
+const playVideo = (option: number) => {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const video: any = document.getElementById('myVideo' + option)
 
@@ -89,6 +89,15 @@ const activeIndex = ref(0)
 const activeQuestion = computed(() => {
   return [q.value[activeIndex.value * 2], q.value[activeIndex.value * 2 + 1]]
 })
+
+const next = () => {
+  if (activeQuestion.value[0].option === '' || activeQuestion.value[1].option === '') {
+    alert('please select')
+
+    return
+  }
+  activeIndex.value++
+}
 </script>
 
 <template>
@@ -104,36 +113,38 @@ const activeQuestion = computed(() => {
       <div class="flex items-center">
         <div
           class="relative left-6 h-50px aspect-square rounded-full bg-#42B156 flex items-center justify-center text-4xl text-white cursor-pointer hover:bg-#AC4D7D"
-          @click="playVideo('A')"
+          @click="playVideo(item.index)"
         >
           {{ item.index }}
         </div>
-        <video id="myVideoA" width="500px" height="130px" class="bg-black">
+        <video :id="'myVideo'+item.index" width="500px" height="130px" class="bg-black">
           <source :src="item.url" type="video/mp4" />
         </video>
-        <img class="h-130px" :src="item.picture" />
+        <img class="h-130px w-130px" :src="item.picture" />
       </div>
-      <n-radio-group v-model:value="item.option">
-          <n-radio-button
-            v-for="op in item.options"
-            class="w-50 text-center rounded!"
-            :key="op.value"
-            :value="op.value"
-            >{{ op.label }}</n-radio-button
-          >
-        </n-radio-group>
+      <n-radio-group v-model:value="item.option" class="ml-50px">
+        <n-radio-button
+          v-for="op in item.options"
+          class="w-250px text-center rounded!"
+          :key="op.value"
+          :value="op.value"
+          >{{ op.label }}</n-radio-button
+        >
+      </n-radio-group>
     </div>
 
-    <n-button color="black" v-if="activeIndex < q.length / 2 - 1" @click="activeIndex++"
-      >Next</n-button
-    >
+    <n-button color="black" v-if="activeIndex < q.length / 2 - 1" @click="next">Next</n-button>
   </div>
 </template>
 
 <style>
 .n-radio-group .n-radio-group__splitor {
   width: 0px;
-  margin-left: 50px;
-  margin-right: 50px;
+  margin-left: 65px;
+  margin-right: 65px;
+}
+
+.n-radio-group .n-radio-button.n-radio-button--checked {
+    color: red !important
 }
 </style>
