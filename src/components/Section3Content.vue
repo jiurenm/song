@@ -14,18 +14,18 @@ const rules = {
   user: {
     name: {
       required: true,
-      message: '请输入姓名',
+      message: 'please input name',
       trigger: 'blur',
     },
     age: {
       required: true,
-      message: '请输入年龄',
+      message: 'please input age',
       trigger: ['input', 'blur'],
     },
   },
   phone: {
     required: true,
-    message: '请输入电话号码',
+    message: 'please input phone',
     trigger: ['input'],
   },
 }

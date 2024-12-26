@@ -100,7 +100,7 @@ const activeQuestion = computed(() => {
     </div>
   </div>
   <div class="w-2/3 h-full grid place-items-center">
-    <div v-for="item in activeQuestion" :key="item.index">
+    <div v-for="item in activeQuestion" :key="item.index" class="grid place-items-center h-full">
       <div class="flex items-center">
         <div
           class="relative left-6 h-50px aspect-square rounded-full bg-#42B156 flex items-center justify-center text-4xl text-white cursor-pointer hover:bg-#AC4D7D"
@@ -113,8 +113,7 @@ const activeQuestion = computed(() => {
         </video>
         <img class="h-130px" :src="item.picture" />
       </div>
-      <div class="mt-8 flex items-center justify-center gap-x-50">
-        <n-radio-group v-model:value="item.option">
+      <n-radio-group v-model:value="item.option">
           <n-radio-button
             v-for="op in item.options"
             class="w-50 text-center rounded!"
@@ -123,7 +122,6 @@ const activeQuestion = computed(() => {
             >{{ op.label }}</n-radio-button
           >
         </n-radio-group>
-      </div>
     </div>
 
     <n-button color="black" v-if="activeIndex < q.length / 2 - 1" @click="activeIndex++"
