@@ -11,6 +11,8 @@ import { NButton } from 'naive-ui'
 
 import m4a from '@/assets/20240513.m4a'
 
+import a from '@/assets/a.png'
+
 const start = ref(false)
 
 const audio = new Audio(m4a)
@@ -36,6 +38,10 @@ const play = () => {
           Prepare to listen to examples, answer questions and complete the questionnaire according
           to the step-by-step instructions.
         </div>
+      </div>
+
+      <div>
+        <img :src="a" />
       </div>
 
       <div class="flex justify-center">
