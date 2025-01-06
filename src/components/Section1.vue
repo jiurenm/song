@@ -41,7 +41,7 @@ const play = () => {
       </div>
 
       <div>
-        <img :src="a" />
+        <img :src="a" width="300" />
       </div>
 
       <div class="flex justify-center">
