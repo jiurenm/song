@@ -31,25 +31,6 @@ const start = ref(false)
         Please help us fill the Questionnaire
       </div>
 
-      <div class="grid justify-center mt-3 gap-y-1">
-        <div class="w-90 flex items-center">
-          <div
-            class="w-15 h-8 bg-#AC4D7D text-white rounded-xl mr-1 flex items-center justify-center"
-          >
-            Step 1
-          </div>
-          <span>- Play each song as many times as you want</span>
-        </div>
-        <div class="w-90 flex items-center">
-          <div
-            class="w-15 h-8 bg-#2C773B text-white rounded-xl mr-1 flex items-center justify-center"
-          >
-            Step 2
-          </div>
-          <span>- Select the matching spectrogram</span>
-        </div>
-      </div>
-
       <div class="flex justify-center mt-6">
         <n-button color="#AC4D7D" class="py-10 px-20 text-2xl" @click="start = true"
           >Start</n-button
