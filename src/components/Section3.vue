@@ -28,7 +28,7 @@ const start = ref(false)
       ></div>
 
       <div class="flex justify-center text-xl mt-3">
-        ULTIMATE ROUND - The songs get fancier and the matching gets harder.
+        Please help us fill the Questionnaire
       </div>
 
       <div class="grid justify-center mt-3 gap-y-1">
@@ -52,7 +52,7 @@ const start = ref(false)
 
       <div class="flex justify-center mt-6">
         <n-button color="#AC4D7D" class="py-10 px-20 text-2xl" @click="start = true"
-          >Play Bird Song Hero!</n-button
+          >Start</n-button
         >
       </div>
     </div>

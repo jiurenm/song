@@ -134,6 +134,7 @@ const next = () => {
     </div>
 
     <n-button color="black" v-if="activeIndex < q.length / 2 - 1" @click="next">Next</n-button>
+    <n-button color="black" v-if="activeIndex == q.length / 2 - 1">Submit</n-button>
   </div>
 </template>
 
