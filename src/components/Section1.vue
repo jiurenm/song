@@ -27,24 +27,24 @@ const play = () => {
 <template>
   <Transition name="slide-up" mode="out-in">
     <div
-      class="h-full w-90% rounded-2xl bg-blue bg-cover bg-center-center bg-no-repeat grid place-items-center"
+      class="h-full w-90% rounded-2xl bg-blue bg-cover bg-center-center bg-no-repeat"
       :style="{
         backgroundImage: 'url()',
       }"
       v-if="!start"
     >
-      <div class="flex justify-center">
-        <div class="w-145 p-5 bg-#E0D4D8 text-center">
-          Prepare to listen to examples, answer questions and complete the questionnaire according
-          to the step-by-step instructions.
+      <div class="w-full h-1/3 grid place-items-center">
+        <div class="max-w-1/2">
+          <div class="p-5 bg-#E0D4D8 overflow-auto">
+            Prepare to listen to examples, answer questions and complete the questionnaire according
+            to the step-by-step instructions.
+          </div>
         </div>
       </div>
-
-      <div>
-        <img :src="a" width="300" />
+      <div class="w-full h-1/3 grid place-items-center">
+        <img :src="a" class="h-full" />
       </div>
-
-      <div class="flex justify-center">
+      <div class="w-full h-1/3 grid place-items-center">
         <n-button color="#AC4D7D" class="py-10 px-20 text-2xl" @click="start = true"
           >Start</n-button
         >

@@ -117,7 +117,7 @@ const next = () => {
         >
           {{ item.index }}
         </div>
-        <video :id="'myVideo'+item.index" width="500px" height="130px" class="bg-black">
+        <video :id="'myVideo' + item.index" width="500px" height="130px" class="bg-black">
           <source :src="item.url" type="video/mp4" />
         </video>
         <img class="h-130px w-130px" :src="item.picture" />
@@ -146,7 +146,7 @@ const next = () => {
 }
 
 .n-radio-group .n-radio-button.n-radio-button--checked {
-    color: white !important;
-    background-color: #42B156;
+  color: white !important;
+  background-color: #42b156;
 }
 </style>

@@ -27,9 +27,7 @@ const start = ref(false)
         }"
       ></div>
 
-      <div class="flex justify-center text-xl mt-3">
-        Please help us fill the Questionnaire
-      </div>
+      <div class="flex justify-center text-xl mt-3">Please help us fill the Questionnaire</div>
 
       <div class="flex justify-center mt-6">
         <n-button color="#AC4D7D" class="py-10 px-20 text-2xl" @click="start = true"

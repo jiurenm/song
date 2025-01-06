@@ -98,7 +98,7 @@ onMounted(() => {
         </div>
         <div class="absolute bottom-0 w-full h-8px bg-sky-800"></div>
       </n-layout-header>
-      <n-layout position="absolute" style="top: 64px">
+      <n-layout position="absolute" style="top: 64px" class="h-screen">
         <n-layout content-style="padding: 48px;" class="h-full bg-blue-300">
           <div class="h-90% bg-sky rounded-xl flex justify-center">
             <RouterView />
