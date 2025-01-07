@@ -11,25 +11,31 @@ import { NButton } from 'naive-ui'
 
 import SectionThreeContent from './Section3Content.vue'
 
+import a from '@/assets/a.png'
+
 const start = ref(false)
 </script>
 
 <template>
   <Transition name="slide-up" mode="out-in">
     <div
-      class="h-full w-90% rounded-2xl bg-#D6AA80 bg-cover bg-center-center bg-no-repeat"
+      class="h-full w-90% rounded-2xl bg-blue bg-cover bg-center-center bg-no-repeat"
+      :style="{
+        backgroundImage: 'url()',
+      }"
       v-if="!start"
     >
-      <div
-        class="mt-10 h-40 bg-contain bg-center-top bg-no-repeat"
-        :style="{
-          backgroundImage: 'url()',
-        }"
-      ></div>
-
-      <div class="flex justify-center text-xl mt-3">Please help us fill the Questionnaire</div>
-
-      <div class="flex justify-center mt-6">
+      <div class="w-full h-1/3 grid place-items-center">
+        <div class="max-w-80%">
+          <div class="p-5 overflow-auto sm:text-4xl text-xs">
+            Please help us fill the Questionnaire.
+          </div>
+        </div>
+      </div>
+      <div class="w-full h-1/3 grid place-items-center">
+        <img :src="a" class="h-full" />
+      </div>
+      <div class="w-full h-1/3 grid place-items-center">
         <n-button color="#AC4D7D" class="py-10 px-20 text-2xl" @click="start = true"
           >Start</n-button
         >

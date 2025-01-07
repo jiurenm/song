@@ -12,6 +12,7 @@ import { NButton } from 'naive-ui'
 import m4a from '@/assets/20240513.m4a'
 
 import a from '@/assets/a.png'
+import { useRouter } from 'vue-router'
 
 const start = ref(false)
 
@@ -21,6 +22,11 @@ const play = () => {
     return
   }
   audio.play()
+}
+
+const router = useRouter()
+const next = () => {
+  router.push('/section2')
 }
 </script>
 
@@ -34,8 +40,8 @@ const play = () => {
       v-if="!start"
     >
       <div class="w-full h-1/3 grid place-items-center">
-        <div class="max-w-1/2">
-          <div class="p-5 bg-#E0D4D8 overflow-auto">
+        <div class="max-w-80%">
+          <div class="p-5 bg-#E0D4D8 overflow-auto sm:text-base text-xs">
             Prepare to listen to examples, answer questions and complete the questionnaire according
             to the step-by-step instructions.
           </div>
@@ -51,29 +57,39 @@ const play = () => {
       </div>
     </div>
 
-    <div v-else class="flex items-center justify-center">
-      <div class="text-3xl grid gap-10">
-        <div>Step 1: Listen to the target bird’s calls and songs</div>
-        <div>
-          Step 2: Listen to the corresponding calls and songs in the subsequent sound samples
-        </div>
-        <div>Step 3: After selecting all options, answer the questionnaire</div>
-
-        <div class="mt-3 flex items-center justify-center gap-20">
-          <n-button class="w-30" color="white"
-            ><span class="text-black" @click="play">Call 1</span></n-button
-          >
-          <n-button class="w-30" color="white"
-            ><span class="text-black" @click="play">Call 2</span></n-button
-          >
+    <div v-else class="h-full">
+      <div class="h-full md:text-3xl sm:text-xl">
+        <div class="h-1/2 pt-4">
+          <div class="h-1/3">Step 1: Listen to the target bird’s calls and songs</div>
+          <div class="h-1/3">
+            Step 2: Listen to the corresponding calls and songs in the subsequent sound samples
+          </div>
+          <div class="h-1/3">Step 3: After selecting all options, answer the questionnaire</div>
         </div>
 
-        <div class="mt-3 flex items-center justify-center gap-20">
+        <div class="h-1/4 grid place-items-center">
+          <div class="flex gap-x-10">
+            <n-button class="w-30" color="white"
+              ><span class="text-black" @click="play">Call 1</span></n-button
+            >
+            <n-button class="w-30" color="white"
+              ><span class="text-black" @click="play">Call 2</span></n-button
+            >
+          </div>
+
+          <div class="flex gap-x-10">
+            <n-button class="w-30" color="white"
+              ><span class="text-black" @click="play">Song 1</span></n-button
+            >
+            <n-button class="w-30" color="white"
+              ><span class="text-black" @click="play">Song 2</span></n-button
+            >
+          </div>
+        </div>
+
+        <div class="h-1/4 grid place-items-center">
           <n-button class="w-30" color="white"
-            ><span class="text-black" @click="play">Song 1</span></n-button
-          >
-          <n-button class="w-30" color="white"
-            ><span class="text-black" @click="play">Song 2</span></n-button
+            ><span class="text-black" @click="next">Next</span></n-button
           >
         </div>
       </div>

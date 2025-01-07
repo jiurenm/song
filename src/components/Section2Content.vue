@@ -101,48 +101,51 @@ const next = () => {
 </script>
 
 <template>
-  <div class="w-1/3 h-full grid place-items-center">
-    <div class="grid place-items-center w-80 h-60 rounded bg-#ABD7B3">
-      <div class="grid place-items-center w-40 h-40 rounded-full bg-#78435E">
+  <div class="md:w-1/3 md:h-full md:grid md:place-items-center hidden">
+    <div class="grid place-items-center w-60% aspect-square rounded bg-#ABD7B3">
+      <div class="grid place-items-center w-60% aspect-square rounded-full bg-#78435E">
         <div class="text-4xl text-white"># {{ activeIndex + 1 }}</div>
       </div>
     </div>
   </div>
-  <div class="w-2/3 h-full grid place-items-center">
-    <div v-for="item in activeQuestion" :key="item.index" class="grid place-items-center h-full">
-      <div class="flex items-center">
+  <div class="md:w-2/3 md:h-full w-full">
+    <div v-for="item in activeQuestion" :key="item.index" class="h-2/5 w-full">
+      <div class="h-2/3 flex">
         <div
-          class="relative left-6 h-50px aspect-square rounded-full bg-#42B156 flex items-center justify-center text-4xl text-white cursor-pointer hover:bg-#AC4D7D"
+          class="relative left-6 top-1/3 h-50px aspect-square rounded-full bg-#42B156 flex items-center justify-center text-4xl text-white cursor-pointer hover:bg-#AC4D7D"
           @click="playVideo(item.index)"
         >
           {{ item.index }}
         </div>
-        <video :id="'myVideo' + item.index" width="500px" height="130px" class="bg-black">
+        <video :id="'myVideo1'" height="100%" class="bg-black w-70%">
           <source :src="item.url" type="video/mp4" />
         </video>
-        <img class="h-130px w-130px" :src="item.picture" />
+        <img class="h-full aspect-square max-w-20%" :src="item.picture" />
       </div>
-      <n-radio-group v-model:value="item.option" class="ml-50px">
-        <n-radio-button
-          v-for="op in item.options"
-          class="w-250px text-center rounded!"
-          :key="op.value"
-          :value="op.value"
-          >{{ op.label }}</n-radio-button
-        >
-      </n-radio-group>
+      <div class="h-1/3 pt-3">
+        <n-radio-group v-model:value="item.option" class="flex items-center justify-center">
+          <n-radio-button
+            v-for="op in item.options"
+            class="w-250px text-center rounded!"
+            :key="op.value"
+            :value="op.value"
+            >{{ op.label }}</n-radio-button
+          >
+        </n-radio-group>
+      </div>
     </div>
-
-    <n-button color="black" v-if="activeIndex < q.length / 2 - 1" @click="next">Next</n-button>
-    <n-button color="black" v-if="activeIndex == q.length / 2 - 1">Submit</n-button>
+    <div class="h-1/5 w-full grid place-items-center">
+      <n-button color="black" v-if="activeIndex < q.length / 2 - 1" @click="next">Next</n-button>
+      <n-button color="black" v-if="activeIndex == q.length / 2 - 1">Submit</n-button>
+    </div>
   </div>
 </template>
 
 <style>
 .n-radio-group .n-radio-group__splitor {
   width: 0px;
-  margin-left: 65px;
-  margin-right: 65px;
+  margin-left: 10%;
+  margin-right: 10%;
 }
 
 .n-radio-group .n-radio-button.n-radio-button--checked {

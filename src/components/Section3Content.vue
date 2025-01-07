@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { NForm, NFormItem, NButton, NInput } from 'naive-ui'
+import { NForm, NFormItem, NButton, NInput, NRadio, NRadioGroup, NSpace } from 'naive-ui'
 import { ref } from 'vue'
 
 const formValue = ref({
@@ -14,7 +14,7 @@ const rules = {
   user: {
     name: {
       required: true,
-      message: 'please input name',
+      message: '',
       trigger: 'blur',
     },
     age: {
@@ -29,6 +29,21 @@ const rules = {
     trigger: ['input'],
   },
 }
+
+const value = ref(null)
+const songs = [
+  {
+    value: "Yes",
+    label: "Yes",
+  },
+  {
+    value: 'No',
+    label: 'No',
+  }
+].map((s) => {
+  s.value = s.value.toLowerCase()
+  return s
+})
 </script>
 
 <template>
@@ -41,35 +56,25 @@ const rules = {
       size="large"
       class="grid place-items-center"
     >
-      <n-form-item label="Name" path="user.name" class="w-100">
-        <n-input v-model:value="formValue.user.name" placeholder="input name" />
+      <n-form-item
+        label="Do you think the sounds you heard is clear?"
+        path="user.name"
+        class="w-100"
+      >
+        <n-radio-group v-model:value="value" name="radiogroup">
+          <n-space>
+            <n-radio v-for="song in songs" :key="song.value" :value="song.value">
+              {{ song.label }}
+            </n-radio>
+          </n-space>
+        </n-radio-group>
       </n-form-item>
-      <n-form-item label="Age" path="user.age" class="w-100">
-        <n-input v-model:value="formValue.user.age" placeholder="input age" />
-      </n-form-item>
-      <n-form-item label="Phone" path="phone" class="w-100">
-        <n-input v-model:value="formValue.phone" placeholder="phone" />
-      </n-form-item>
-    </n-form>
-  </div>
-
-  <div class="w-1/2 p-10">
-    <n-form
-      ref="formRef"
-      :label-width="80"
-      :model="formValue"
-      :rules="rules"
-      size="large"
-      class="grid place-items-center"
-    >
-      <n-form-item label="Name" path="user.name" class="w-100">
-        <n-input v-model:value="formValue.user.name" placeholder="input name" />
-      </n-form-item>
-      <n-form-item label="Age" path="user.age" class="w-100">
-        <n-input v-model:value="formValue.user.age" placeholder="input age" />
-      </n-form-item>
-      <n-form-item label="Phone" path="phone" class="w-100">
-        <n-input v-model:value="formValue.phone" placeholder="phone" />
+      <n-form-item
+        label="Which season do you think it is from the sound?"
+        path="phone"
+        class="w-100"
+      >
+        <n-input v-model:value="formValue.phone" placeholder="please fill" />
       </n-form-item>
       <n-form-item class="float-right">
         <n-button attr-type="button" color="#AC4D7D"> submit </n-button>

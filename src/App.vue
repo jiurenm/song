@@ -6,7 +6,7 @@ import type { GlobalThemeOverrides } from 'naive-ui'
 
 const themeOverrides: GlobalThemeOverrides = {
   common: {
-    primaryColor: '#39C5BB',
+    primaryColor: '#8888cc',
   },
   Button: {},
 }
