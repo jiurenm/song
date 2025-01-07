@@ -53,7 +53,7 @@ watch(router.currentRoute, () => {
         </div>
         <div class="px-24px pb-8px flex gap-x-8px items-center justify-center ml-auto mr-80px">
           <div>sections:</div>
-          <n-popover trigger="hover">
+          <n-popover trigger="manual" :show="false">
             <template #trigger>
               <div
                 class="h-30px w-30px bg-#3E4443 flex items-center justify-center cursor-pointer border-b-solid border-b-2px hover:bg-#8ECA9A hover:border-b-4px"
@@ -69,7 +69,7 @@ watch(router.currentRoute, () => {
             </template>
             <div class="w-30 h-30">这是 section 1</div>
           </n-popover>
-          <n-popover trigger="hover">
+          <n-popover trigger="manual" :show="false">
             <template #trigger>
               <div
                 class="h-30px w-30px bg-#3E4443 flex items-center justify-center cursor-pointer border-b-solid border-b-2px hover:bg-#8ECA9A hover:border-b-4px"
@@ -85,7 +85,7 @@ watch(router.currentRoute, () => {
             </template>
             <div class="w-30 h-30">这是 section 2</div>
           </n-popover>
-          <n-popover trigger="hover">
+          <n-popover trigger="manual" :show="false">
             <template #trigger>
               <div
                 class="h-30px w-30px bg-#3E4443 flex items-center justify-center cursor-pointer border-b-solid border-b-2px hover:bg-#8ECA9A hover:border-b-4px"
