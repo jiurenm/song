@@ -47,10 +47,9 @@ const songs = [
 </script>
 
 <template>
-  <div class="w-1/2 p-10">
+  <div class="w-1/2 py-10">
     <n-form
       ref="formRef"
-      :label-width="80"
       :model="formValue"
       :rules="rules"
       size="large"
@@ -59,7 +58,7 @@ const songs = [
       <n-form-item
         label="Do you think the sounds you heard is clear?"
         path="user.name"
-        class="w-100"
+        class="w-100%"
       >
         <n-radio-group v-model:value="value" name="radiogroup">
           <n-space>
@@ -72,7 +71,7 @@ const songs = [
       <n-form-item
         label="Which season do you think it is from the sound?"
         path="phone"
-        class="w-100"
+        class="w-100%"
       >
         <n-input v-model:value="formValue.phone" placeholder="please fill" />
       </n-form-item>
