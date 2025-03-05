@@ -124,7 +124,7 @@ const next = () => {
         >
           {{ item.index }}
         </div>
-        <video :id="'myVideo1'" height="100%" class="bg-black w-70%">
+        <video :id="'myVideo'+item.index" height="100%" class="bg-black w-70%">
           <source :src="item.url" type="video/mp4" />
         </video>
         <img class="h-full aspect-square max-w-20%" :src="item.picture" />
