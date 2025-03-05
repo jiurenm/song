@@ -9,6 +9,13 @@ import { computed, ref } from 'vue'
 
 import { NButton, NRadioButton, NRadioGroup } from 'naive-ui'
 
+import audio1 from '@/assets/01.mp3'
+import audio2 from '@/assets/02.mp3'
+import audio3 from '@/assets/03.m4a'
+import audio4 from '@/assets/04.m4a'
+import audio5 from '@/assets/05.m4a'
+import audio6 from '@/assets/06.m4a'
+
 const playVideo = (option: number) => {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const video: any = document.getElementById('myVideo' + option)
@@ -19,7 +26,7 @@ const playVideo = (option: number) => {
 const q = ref([
   {
     index: 1,
-    url: 'https://academy.allaboutbirds.org/features/bird-song-hero/video/intro/HumanWoldWhistle_spectrogram.mp4',
+    url: audio1,
     picture:
       'https://academy.allaboutbirds.org/features/bird-song-hero/images/intro/nateWhistle.jpg',
     option: '',
@@ -30,7 +37,7 @@ const q = ref([
   },
   {
     index: 2,
-    url: 'https://academy.allaboutbirds.org/features/bird-song-hero/video/intro/HumanWoldWhistle_spectrogram.mp4',
+    url: audio2,
     picture:
       'https://academy.allaboutbirds.org/features/bird-song-hero/images/intro/nateWhistle.jpg',
     option: '',
@@ -41,7 +48,7 @@ const q = ref([
   },
   {
     index: 3,
-    url: 'https://academy.allaboutbirds.org/features/bird-song-hero/video/intro/HumanWoldWhistle_spectrogram.mp4',
+    url: audio3,
     picture:
       'https://academy.allaboutbirds.org/features/bird-song-hero/images/intro/nateWhistle.jpg',
     option: '',
@@ -52,7 +59,7 @@ const q = ref([
   },
   {
     index: 4,
-    url: 'https://academy.allaboutbirds.org/features/bird-song-hero/video/intro/HumanWoldWhistle_spectrogram.mp4',
+    url: audio4,
     picture:
       'https://academy.allaboutbirds.org/features/bird-song-hero/images/intro/nateWhistle.jpg',
     option: '',
@@ -63,7 +70,7 @@ const q = ref([
   },
   {
     index: 5,
-    url: 'https://academy.allaboutbirds.org/features/bird-song-hero/video/intro/HumanWoldWhistle_spectrogram.mp4',
+    url: audio5,
     picture:
       'https://academy.allaboutbirds.org/features/bird-song-hero/images/intro/nateWhistle.jpg',
     option: '',
@@ -74,7 +81,7 @@ const q = ref([
   },
   {
     index: 6,
-    url: 'https://academy.allaboutbirds.org/features/bird-song-hero/video/intro/HumanWoldWhistle_spectrogram.mp4',
+    url: audio6,
     picture:
       'https://academy.allaboutbirds.org/features/bird-song-hero/images/intro/nateWhistle.jpg',
     option: '',
