@@ -9,12 +9,16 @@ import { computed, ref } from 'vue'
 
 import { NButton, NRadioButton, NRadioGroup } from 'naive-ui'
 
-import audio1 from '@/assets/01.mp3'
-import audio2 from '@/assets/02.mp3'
-import audio3 from '@/assets/03.m4a'
-import audio4 from '@/assets/04.m4a'
-import audio5 from '@/assets/05.m4a'
-import audio6 from '@/assets/06.m4a'
+import audio1 from '@/assets/segment_001.mp3'
+import audio2 from '@/assets/segment_002.mp3'
+import audio3 from '@/assets/segment_003.mp3'
+import audio4 from '@/assets/segment_004.mp3'
+import audio5 from '@/assets/segment_005.mp3'
+import audio6 from '@/assets/segment_006.mp3'
+import audio7 from '@/assets/segment_007.mp3'
+import audio8 from '@/assets/segment_008.mp3'
+import audio9 from '@/assets/segment_009.mp3'
+import audio10 from '@/assets/segment_010.mp3'
 
 const playVideo = (option: number) => {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -82,6 +86,50 @@ const q = ref([
   {
     index: 6,
     url: audio6,
+    picture:
+      'https://academy.allaboutbirds.org/features/bird-song-hero/images/intro/nateWhistle.jpg',
+    option: '',
+    options: [
+      { value: 'Yes', label: 'Yes' },
+      { value: 'No', label: 'No' },
+    ],
+  },
+  {
+    index: 7,
+    url: audio7,
+    picture:
+      'https://academy.allaboutbirds.org/features/bird-song-hero/images/intro/nateWhistle.jpg',
+    option: '',
+    options: [
+      { value: 'Yes', label: 'Yes' },
+      { value: 'No', label: 'No' },
+    ],
+  },
+  {
+    index: 8,
+    url: audio8,
+    picture:
+      'https://academy.allaboutbirds.org/features/bird-song-hero/images/intro/nateWhistle.jpg',
+    option: '',
+    options: [
+      { value: 'Yes', label: 'Yes' },
+      { value: 'No', label: 'No' },
+    ],
+  },
+  {
+    index: 9,
+    url: audio9,
+    picture:
+      'https://academy.allaboutbirds.org/features/bird-song-hero/images/intro/nateWhistle.jpg',
+    option: '',
+    options: [
+      { value: 'Yes', label: 'Yes' },
+      { value: 'No', label: 'No' },
+    ],
+  },
+  {
+    index: 10,
+    url: audio10,
     picture:
       'https://academy.allaboutbirds.org/features/bird-song-hero/images/intro/nateWhistle.jpg',
     option: '',
