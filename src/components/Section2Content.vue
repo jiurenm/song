@@ -33,10 +33,15 @@ const q = ref([
     url: audio1,
     picture:
       'https://academy.allaboutbirds.org/features/bird-song-hero/images/intro/nateWhistle.jpg',
-    option: '',
-    options: [
+    option1: '',
+    option2: '',
+    options1: [
       { value: 'Yes', label: 'Yes' },
-      { value: 'No', label: 'No' },
+      { value: 'No', label: 'No' }
+    ],
+    options2: [
+      { value: 'Yes', label: 'Yes' },
+      { value: 'No', label: 'No' }
     ],
   },
   {
@@ -44,10 +49,15 @@ const q = ref([
     url: audio2,
     picture:
       'https://academy.allaboutbirds.org/features/bird-song-hero/images/intro/nateWhistle.jpg',
-    option: '',
-    options: [
+    option1: '',
+    option2: '',
+    options1: [
       { value: 'Yes', label: 'Yes' },
-      { value: 'No', label: 'No' },
+      { value: 'No', label: 'No' }
+    ],
+    options2: [
+      { value: 'Yes', label: 'Yes' },
+      { value: 'No', label: 'No' }
     ],
   },
   {
@@ -55,10 +65,15 @@ const q = ref([
     url: audio3,
     picture:
       'https://academy.allaboutbirds.org/features/bird-song-hero/images/intro/nateWhistle.jpg',
-    option: '',
-    options: [
+    option1: '',
+    option2: '',
+    options1: [
       { value: 'Yes', label: 'Yes' },
-      { value: 'No', label: 'No' },
+      { value: 'No', label: 'No' }
+    ],
+    options2: [
+      { value: 'Yes', label: 'Yes' },
+      { value: 'No', label: 'No' }
     ],
   },
   {
@@ -66,10 +81,15 @@ const q = ref([
     url: audio4,
     picture:
       'https://academy.allaboutbirds.org/features/bird-song-hero/images/intro/nateWhistle.jpg',
-    option: '',
-    options: [
+    option1: '',
+    option2: '',
+    options1: [
       { value: 'Yes', label: 'Yes' },
-      { value: 'No', label: 'No' },
+      { value: 'No', label: 'No' }
+    ],
+    options2: [
+      { value: 'Yes', label: 'Yes' },
+      { value: 'No', label: 'No' }
     ],
   },
   {
@@ -77,10 +97,15 @@ const q = ref([
     url: audio5,
     picture:
       'https://academy.allaboutbirds.org/features/bird-song-hero/images/intro/nateWhistle.jpg',
-    option: '',
-    options: [
+    option1: '',
+    option2: '',
+    options1: [
       { value: 'Yes', label: 'Yes' },
-      { value: 'No', label: 'No' },
+      { value: 'No', label: 'No' }
+    ],
+    options2: [
+      { value: 'Yes', label: 'Yes' },
+      { value: 'No', label: 'No' }
     ],
   },
   {
@@ -88,10 +113,15 @@ const q = ref([
     url: audio6,
     picture:
       'https://academy.allaboutbirds.org/features/bird-song-hero/images/intro/nateWhistle.jpg',
-    option: '',
-    options: [
+    option1: '',
+    option2: '',
+    options1: [
       { value: 'Yes', label: 'Yes' },
-      { value: 'No', label: 'No' },
+      { value: 'No', label: 'No' }
+    ],
+    options2: [
+      { value: 'Yes', label: 'Yes' },
+      { value: 'No', label: 'No' }
     ],
   },
   {
@@ -99,10 +129,15 @@ const q = ref([
     url: audio7,
     picture:
       'https://academy.allaboutbirds.org/features/bird-song-hero/images/intro/nateWhistle.jpg',
-    option: '',
-    options: [
+    option1: '',
+    option2: '',
+    options1: [
       { value: 'Yes', label: 'Yes' },
-      { value: 'No', label: 'No' },
+      { value: 'No', label: 'No' }
+    ],
+    options2: [
+      { value: 'Yes', label: 'Yes' },
+      { value: 'No', label: 'No' }
     ],
   },
   {
@@ -110,10 +145,15 @@ const q = ref([
     url: audio8,
     picture:
       'https://academy.allaboutbirds.org/features/bird-song-hero/images/intro/nateWhistle.jpg',
-    option: '',
-    options: [
+    option1: '',
+    option2: '',
+    options1: [
       { value: 'Yes', label: 'Yes' },
-      { value: 'No', label: 'No' },
+      { value: 'No', label: 'No' }
+    ],
+    options2: [
+      { value: 'Yes', label: 'Yes' },
+      { value: 'No', label: 'No' }
     ],
   },
   {
@@ -121,10 +161,15 @@ const q = ref([
     url: audio9,
     picture:
       'https://academy.allaboutbirds.org/features/bird-song-hero/images/intro/nateWhistle.jpg',
-    option: '',
-    options: [
+    option1: '',
+    option2: '',
+    options1: [
       { value: 'Yes', label: 'Yes' },
-      { value: 'No', label: 'No' },
+      { value: 'No', label: 'No' }
+    ],
+    options2: [
+      { value: 'Yes', label: 'Yes' },
+      { value: 'No', label: 'No' }
     ],
   },
   {
@@ -132,10 +177,15 @@ const q = ref([
     url: audio10,
     picture:
       'https://academy.allaboutbirds.org/features/bird-song-hero/images/intro/nateWhistle.jpg',
-    option: '',
-    options: [
+    option1: '',
+    option2: '',
+    options1: [
       { value: 'Yes', label: 'Yes' },
-      { value: 'No', label: 'No' },
+      { value: 'No', label: 'No' }
+    ],
+    options2: [
+      { value: 'Yes', label: 'Yes' },
+      { value: 'No', label: 'No' }
     ],
   },
 ])
@@ -146,7 +196,7 @@ const activeQuestion = computed(() => {
 })
 
 const next = () => {
-  if (activeQuestion.value[0].option === '' || activeQuestion.value[1].option === '') {
+  if (activeQuestion.value[0].option1 === '' || activeQuestion.value[1].option1 === '') {
     alert('please select')
 
     return
@@ -165,7 +215,7 @@ const next = () => {
   </div>
   <div class="md:w-2/3 md:h-full w-full">
     <div v-for="item in activeQuestion" :key="item.index" class="h-2/5 w-full">
-      <div class="h-2/3 flex">
+      <div class="h-2/3 flex" :class="item.index%2==0?'pt-10':'pt-3'">
         <div
           class="relative left-6 top-1/3 h-50px aspect-square rounded-full bg-#42B156 flex items-center justify-center text-4xl text-white cursor-pointer hover:bg-#AC4D7D"
           @click="playVideo(item.index)"
@@ -177,11 +227,25 @@ const next = () => {
         </video>
         <!-- <img class="h-full aspect-square max-w-20%" :src="item.picture" /> -->
       </div>
-      <div class="h-1/3 pt-3">
-        <n-radio-group v-model:value="item.option" class="flex items-center justify-center">
+      <div class="h-1/6 pt-3 w-90%">
+        
+        <n-radio-group v-model:value="item.option1" class="flex items-center justify-center">
+          <div class="relative">Call</div>
           <n-radio-button
-            v-for="op in item.options"
-            class="w-250px text-center rounded!"
+            v-for="op in item.options1"
+            class="w-200px text-center rounded!"
+            :key="op.value"
+            :value="op.value"
+            >{{ op.label }}</n-radio-button
+          >
+        </n-radio-group>
+      </div>
+      <div class="h-1/6 w-90%">
+        <n-radio-group v-model:value="item.option2" class="flex items-center justify-center">
+          <div class="relative">Song</div>
+          <n-radio-button
+            v-for="op in item.options2"
+            class="w-200px text-center rounded!"
             :key="op.value"
             :value="op.value"
             >{{ op.label }}</n-radio-button
@@ -189,7 +253,7 @@ const next = () => {
         </n-radio-group>
       </div>
     </div>
-    <div class="h-1/5 w-full grid place-items-center">
+    <div class="h-1/5 w-full grid place-items-center pt-5">
       <n-button color="black" v-if="activeIndex < q.length / 2 - 1" @click="next">Next</n-button>
       <n-button color="black" v-if="activeIndex == q.length / 2 - 1">Submit</n-button>
     </div>
