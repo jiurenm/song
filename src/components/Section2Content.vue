@@ -172,10 +172,10 @@ const next = () => {
         >
           {{ item.index }}
         </div>
-        <video :id="'myVideo'+item.index" height="100%" class="bg-black w-70%">
+        <video :id="'myVideo'+item.index" height="100%" controls class="bg-black w-85%">
           <source :src="item.url" type="video/mp4" />
         </video>
-        <img class="h-full aspect-square max-w-20%" :src="item.picture" />
+        <!-- <img class="h-full aspect-square max-w-20%" :src="item.picture" /> -->
       </div>
       <div class="h-1/3 pt-3">
         <n-radio-group v-model:value="item.option" class="flex items-center justify-center">
